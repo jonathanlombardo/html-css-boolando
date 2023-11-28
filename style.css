@@ -85,11 +85,26 @@ main .card {
   position: relative;
 
   /* debug */
-  border: 2px dashed black;
+  /* border: 2px dashed black; */
 }
 
 .card img {
   width: 100%;
+}
+
+.card .second-image {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.card .second-image:hover {
+  opacity: 100%;
+  transition: 0.4s;
+}
+
+.card:hover {
+  border: 2px solid salmon;
 }
 
 .card .labels {
