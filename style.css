@@ -25,10 +25,11 @@ ul {
 /* # GENERICS */
 
 :root {
+  --margincard: 5px;
 }
 
 .container {
-  width: 1180px;
+  max-width: 1180px;
   padding: 20px;
   margin: 0 auto;
 }
@@ -70,3 +71,59 @@ header .menu-option {
 }
 
 /* -- */
+
+main .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main .card {
+  width: calc(100% / 3 - (2 * var(--margincard)));
+  min-width: 300px;
+  margin: var(--margincard);
+  position: relative;
+
+  /* debug */
+  border: 2px dashed black;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card .labels {
+  position: absolute;
+  top: 78%;
+  left: 0;
+}
+
+.card .wish {
+  position: absolute;
+  top: 5%;
+  right: 0;
+}
+
+/* # FOOTER */
+
+footer {
+  background-color: black;
+  color: white;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* FOOTER LEFT */
+
+footer .footer-left .link {
+  display: flex;
+}
+
+/* FOOTER RIGHT */
+
+footer .footer-right .social-link {
+  display: flex;
+}
