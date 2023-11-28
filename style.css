@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 img {
@@ -26,10 +27,11 @@ ul {
 
 :root {
   --margincard: 5px;
+  --smalltext: 1rem;
 }
 
 .container {
-  max-width: 1180px;
+  max-width: 1440px;
   padding: 20px;
   margin: 0 auto;
 }
@@ -37,8 +39,13 @@ ul {
 /* # HEADER */
 
 header {
-  min-height: 80px;
-  background-color: salmon;
+  background-color: #ff6900;
+  box-shadow: 0 1px 5px 0 #333;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  /* min-height: 80px; */
 }
 
 header .container {
@@ -51,6 +58,10 @@ header .container {
 
 header .menu {
   display: flex;
+  gap: 10px;
+  font-size: var(--smalltext);
+  font-weight: bold;
+  color: white;
 }
 
 /* LOGO */
@@ -59,9 +70,15 @@ header .logo img {
   max-height: 30px;
 }
 
+/* LINK */
+
 header .link {
   display: flex;
   justify-content: flex-end;
+  gap: 10px;
+  font-size: var(--smalltext);
+  font-weight: bold;
+  color: white;
 }
 
 /* -- DEBUG */
@@ -100,8 +117,13 @@ main .card {
 
 .card .second-image:hover {
   opacity: 100%;
-  transition: 0.4s;
+  transition: 0.6s;
 }
+
+/*?     .card .second-image:hover + .first-image { */
+/*?     opacity: 0; */
+/*?     ransition: 0.4s; */
+/*?     } */
 
 .card:hover {
   border: 2px solid salmon;
