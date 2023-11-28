@@ -18,5 +18,55 @@ a:visited {
 }
 
 ul {
-  style: none;
+  list-style: none;
+  display: block;
 }
+
+/* # GENERICS */
+
+:root {
+}
+
+.container {
+  width: 1180px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* # HEADER */
+
+header {
+  min-height: 80px;
+  background-color: salmon;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* MENU */
+
+header .menu {
+  display: flex;
+}
+
+/* LOGO */
+
+header .logo img {
+  max-height: 30px;
+}
+
+header .link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* -- DEBUG */
+
+header .menu-option {
+  display: none;
+}
+
+/* -- */
