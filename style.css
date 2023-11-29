@@ -26,7 +26,7 @@ ul {
 /* # GENERICS */
 
 :root {
-  --margincard: 5px;
+  --margincard: 10px;
   --smalltext: 1rem;
 }
 
@@ -89,6 +89,12 @@ header .menu-option {
 
 /* -- */
 
+/* # PRODUCTS */
+
+main {
+  margin: 30px 0;
+}
+
 main .container {
   display: flex;
   justify-content: center;
@@ -129,16 +135,86 @@ main .card {
   border: 2px solid salmon;
 }
 
+.card .brand {
+  font-size: 14px;
+}
+
+.card .title-prod {
+  font-weight: bold;
+}
+
+.card .brand,
+.card .title-prod,
+.card .price {
+  line-height: 18px;
+}
+
+.card .brand,
+.card .title-prod {
+  display: block;
+}
+
+.card .brand:hover,
+.card .title-prod:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.card .price {
+  font-size: 14px;
+}
+
+.card .price .final-price {
+  color: red;
+  font-weight: bold;
+}
+
+.card .price .old-price {
+  text-decoration: line-through;
+}
+
+.card .price .old-price::after,
+.card .price .final-price::after {
+  content: " €";
+}
+
 .card .labels {
   position: absolute;
-  top: 78%;
+  top: 84%;
   left: 0;
+}
+
+.card .labels > span {
+  margin-right: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  padding: 3px 9px;
+}
+
+.card .labels .discount {
+  background-color: red;
+}
+
+.card .labels .tag {
+  background-color: green;
 }
 
 .card .wish {
   position: absolute;
-  top: 5%;
+  top: 1%;
   right: 0;
+  background-color: white;
+  height: 50px;
+  line-height: 50px;
+  aspect-ratio: 1/1;
+  font-size: 36px;
+  text-align: center;
+}
+
+.card .wish:hover {
+  color: red;
+  cursor: pointer;
 }
 
 /* # FOOTER */
@@ -146,21 +222,33 @@ main .card {
 footer {
   background-color: black;
   color: white;
+  line-height: 30px;
+  font-size: 15px;
 }
 
 footer .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-/* FOOTER LEFT */
+/* FOOTER SECTIONS */
 
-footer .footer-left .link {
-  display: flex;
+footer .footer-left .company {
+  font-weight: bold;
+  font-size: 1rem;
 }
 
-/* FOOTER RIGHT */
+footer .footer-right .social-claim {
+  font-weight: bold;
+}
 
+footer .footer-left .link,
 footer .footer-right .social-link {
   display: flex;
+  gap: 15px;
+}
+
+footer .footer-right .social-link {
+  font-size: 20px;
 }
