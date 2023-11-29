@@ -28,6 +28,7 @@ ul {
 :root {
   --margincard: 10px;
   --smalltext: 1rem;
+  --paddingmenu: 8px;
 }
 
 .container {
@@ -64,6 +65,11 @@ header .menu {
   color: white;
 }
 
+header .menu > .option {
+  position: relative;
+  cursor: pointer;
+}
+
 /* LOGO */
 
 header .logo img {
@@ -83,8 +89,30 @@ header .link {
 
 /* -- DEBUG */
 
-header .menu-option {
+header .submenu {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  box-shadow: 0 1px 5px 0 #333;
+
+  background-color: #ff6900;
+  font-size: 0.9em;
+  padding: var(--paddingmenu);
+
   display: none;
+}
+
+header .submenu .suboption {
+  padding: var(--paddingmenu);
+  line-height: 100%;
+}
+
+header .menu > .option:hover .submenu {
+  display: block;
+}
+
+header .submenu .suboption:hover {
+  background-color: #ff4900;
 }
 
 /* -- */
